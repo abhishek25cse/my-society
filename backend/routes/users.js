@@ -6,6 +6,26 @@ router.route('/').get((req, res) => {
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
 });
+
+router.route('/view-format').get((req, res) => {
+  User.find()
+    .then(users => {
+        var userList = [];
+        users.forEach ( 
+          user => 
+          {
+             var usr = {
+                name : user.username
+              }
+             userList.push(usr);
+          }
+         );
+       res.json(userList);  
+       })      
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
 router.route('/add').post((req, res) => {
   const username = req.body.username;
   const newUser = new User({username});
