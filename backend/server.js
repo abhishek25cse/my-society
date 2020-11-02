@@ -9,6 +9,11 @@ const port = process.env.port || 5000;
 app.use(cors());
 app.use(express.json());
 
+// integration of template engine pug
+// to install pug use -- npm install pug --save
+app.set('view engine', 'pug');
+app.set('views','./views');
+
 
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
@@ -24,6 +29,9 @@ const usersRouter = require('./routes/users');
 //app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
+app.get('/*', function(req,res) {
+  res.render('error');
+})
 app.listen(port, () => {
     console.log(`server is running on port :  ${port}`);
 })
