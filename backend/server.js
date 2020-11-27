@@ -25,9 +25,15 @@ connection.once('open', () => {
 
 //const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
+const memberRouter = require('./routes/member');
+const flatRouter = require('./routes/flat');
+const parkingRouter = require('./routes/parking');
 
 //app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
+app.use('/member',memberRouter);
+app.use('/flat',flatRouter);
+app.use('/parking',parkingRouter);
 
 app.get('/*', function(req,res) {
   res.render('error');

@@ -69,4 +69,20 @@ router.route('/update/:id').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//sample request 
+//{"username":"abhishek ji sddress",
+//"address":"Bengaluru cum Ranchi"
+//}
+
+router.route('/addUser').post((req, res) => {
+  const username = req.body.username;
+  const address = req.body.address;
+  const newUser = new User({
+    username:req.body.username,
+    address :req.body.address});
+  newUser.save()
+    .then(() => res.json('User added!'))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
