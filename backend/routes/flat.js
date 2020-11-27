@@ -49,7 +49,7 @@ router.route('/flatownerallocate').post((req, res) => {
     owner.member_id.push(req.body.member);
     owner.flat_id.push(req.body.flat);
     owner.save()
-    .then(() => res.json("Owner added !! "))
+    .then(() => res.json("Owner added successfully "))
     .catch(err => res.status(400).json('Érror:' +err ));
 });
 
