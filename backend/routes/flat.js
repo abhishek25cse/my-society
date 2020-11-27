@@ -28,9 +28,9 @@ router.route('/add').post((req, res) => {
   });
 
 router.route('/flatowner').get((req, res) => {
-    FlatOwner.find().populate('member_id','NAME')
-    .populate('flat_id', 'FLAT_NO')
-    .select('member_id').select('flat_id')
+    FlatOwner.find().populate('member_id','NAME CONTACT_NUMBER EMAIL -_id')   
+    .populate('flat_id', 'FLAT_NO -_id FLOOR AREA FLAT_FACING')
+    .select('member_id flat_id -_id')
     .then(FlatOwner => res.json(FlatOwner))
     .catch(err => res.status(400).json('Error: ' + err));
 });
