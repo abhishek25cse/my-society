@@ -1,23 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Owners from './components/Owners';
+import Parking from './components/Parking';
+import Flat from './components/Flat';
+import OwnerForm from './components/OwnerForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <header className="App-header"> 
+      <Owners name = "RESIDENTs"/>,
+      <Parking name = "PARKING"/>,
+      <Flat name ="FLAT"/>
+      <OwnerForm name ="ADD OWNER"/>     
       </header>
     </div>
   );
