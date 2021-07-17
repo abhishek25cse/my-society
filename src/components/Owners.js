@@ -7,7 +7,7 @@ class Owners extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            name : props.name,
             columnDefs :[
                 {headername : 'Name', field:'NAME', sortable:true, filter : true, resizable:true},
                 {headername : 'ID_CARD', field:'ID_CARD', sortable:true, filter:true,resizable:true},
@@ -28,12 +28,13 @@ class Owners extends React.Component {
 
     render() {
       return (
-          <div className="ag-theme-balham"
+          <div className="ag-theme-balham" 
           style = {{
               width : 850,
               height : 200
           }}
           >
+              <h1>{this.state.name}</h1> 
           <AgGridReact 
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData} />

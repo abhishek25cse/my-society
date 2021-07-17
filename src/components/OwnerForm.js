@@ -49,7 +49,7 @@ export default class OwnerForm extends React.Component {
                    <tr><td>  Contact : <input type='text' name='contactNo' value={contactNo} onChange={this.onChangeHandler}/>  </td>
                    <td> Email id : <input type='text' name='email' value={email} onChange={this.onChangeHandler}/>  </td> </tr>
                     </table>
-                    <button type = 'submit'>Submit</button>
+                    <button type = 'submit'>Add</button>
 
                 </form>
             </div>

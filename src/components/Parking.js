@@ -7,7 +7,7 @@ class Parking extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            name:props.name,
             columnDefs :[
                 {headername : 'FLOOR', field:'FLOOR', sortable:true, filter : true},
                 {headername : 'SOLD', field:'SOLD', sortable:true, filter:true},
@@ -33,6 +33,7 @@ class Parking extends React.Component {
               height : 200
           }}
           >
+              <h1>{this.state.name}</h1>
           <AgGridReact 
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData} />

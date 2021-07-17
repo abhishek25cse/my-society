@@ -7,7 +7,7 @@ class Flat extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            name : props.name,
             columnDefs :[
                 {headername : 'FLOOR', field:'FLOOR', sortable:true, filter : true, resizable:true},
                 {headername : 'FLAT_NO', field:'FLAT_NO', sortable:true, filter:true,resizable:true},
@@ -39,6 +39,7 @@ class Flat extends React.Component {
               height : 200
           }}
           >
+              <h1 >{this.state.name}</h1>
           <AgGridReact 
           columnDefs={this.state.columnDefs}
           rowData={this.state.rowData} />
