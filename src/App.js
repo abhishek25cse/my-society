@@ -1,23 +1,19 @@
 import React from 'react';
 //import './App.css';
-import Owners from './components/Owners';
+import OwnerHome from './components/OwnerHome';
 import Parking from './components/Parking';
 import Flat from './components/Flat';
-import OwnerForm from './components/OwnerForm';
-import ConfigForm from './components/ConfigForm';
-import Config from './components/Config';
+import ConfigHome from './components/ConfigHome';
 
 function App() {
   return (
     <div >
        <header className="App-header"> 
-      <Owners name = "RESIDENTs"/><br/><br/>
+      <OwnerHome name = "OWNERs"/><br/><br/>
       <Parking name = "PARKING"/><br/><br/>
       <Flat name ="FLAT"/><br/><br/><br/>
-      <OwnerForm name ="ADD OWNER"/>  <br/>   <br/>
-      <Config name = "SYSTEM CONFIG"/><br/><br/>
-      <ConfigForm name = "Add Config"/><br/>
-      </header>
+      <ConfigHome name = "SYSTEM CONFIG"/><br/><br/>
+     </header>
     </div>
   );
 }

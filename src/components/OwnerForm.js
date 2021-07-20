@@ -42,12 +42,12 @@ export default class OwnerForm extends React.Component {
             <div>
                 <form onSubmit = {this.submitHandler} >
                     <table>
-                    <tr><td>Name : <input type='text' name='name' value={name} onChange={this.onChangeHandler}/> </td>
-                  <td> Id Card Type : <input type='text' name='idCard' value={idCard} onChange={this.onChangeHandler} /> </td> </tr>
-                  <tr><td>  Id Card Number <input type='text' name='idCardNo' value={idCardNo} onChange={this.onChangeHandler}/>  </td>
-                   <td> Address : <input type='text' name='address' value={address} onChange={this.onChangeHandler}/>  </td> </tr>
-                   <tr><td>  Contact : <input type='text' name='contactNo' value={contactNo} onChange={this.onChangeHandler}/>  </td>
-                   <td> Email id : <input type='text' name='email' value={email} onChange={this.onChangeHandler}/>  </td> </tr>
+                        <tr><td>Name : <input type='text' name='name' value={name} onChange={this.onChangeHandler}/></td>
+                        <td>Id Card Type : <input type='text' name='idCard' value={idCard} onChange={this.onChangeHandler} /></td></tr>
+                        <tr><td>Id Card Number : <input type='text' name='idCardNo' value={idCardNo} onChange={this.onChangeHandler}/></td>
+                        <td>Address : <input type='text' name='address' value={address} onChange={this.onChangeHandler}/></td></tr>
+                        <tr><td>Contact : <input type='text' name='contactNo' value={contactNo} onChange={this.onChangeHandler}/></td>
+                        <td>Email id : <input type='text' name='email' value={email} onChange={this.onChangeHandler}/></td></tr>
                     </table>
                     <button type = 'submit'>Add</button>
 

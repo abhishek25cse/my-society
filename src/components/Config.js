@@ -27,7 +27,7 @@ class Config extends React.Component {
       return (
           <div className="ag-theme-balham"
           style = {{
-              width : 600,
+              width : 800,
               height : 200
           }}
           >
