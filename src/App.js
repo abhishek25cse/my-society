@@ -4,6 +4,8 @@ import Owners from './components/Owners';
 import Parking from './components/Parking';
 import Flat from './components/Flat';
 import OwnerForm from './components/OwnerForm';
+import ConfigForm from './components/ConfigForm';
+import Config from './components/Config';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       <Owners name = "RESIDENTs"/><br/><br/>
       <Parking name = "PARKING"/><br/><br/>
       <Flat name ="FLAT"/><br/><br/><br/>
-      <OwnerForm name ="ADD OWNER"/>     
+      <OwnerForm name ="ADD OWNER"/>  <br/>   <br/>
+      <Config name = "SYSTEM CONFIG"/><br/><br/>
+      <ConfigForm name = "Add Config"/><br/>
       </header>
     </div>
   );
