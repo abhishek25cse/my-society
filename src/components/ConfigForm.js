@@ -39,9 +39,9 @@ export default class ConfigForm extends React.Component {
             <div>
                 <form onSubmit = {this.submitHandler} >
                     <table>
-                    <tr><td>Code : <input type='text' name='code' value={code} onChange={this.onChangeHandler}/></td></tr>
-                  <tr><td>Desc : <input type='text' name='desc' value={desc} onChange={this.onChangeHandler} /></td></tr>
-                  <tr><td>Type : <input type='text' name='type' value={type} onChange={this.onChangeHandler}/></td></tr>
+                        <tr><td>Code : <input type='text' name='code' value={code} onChange={this.onChangeHandler}/></td></tr>
+                        <tr><td>Desc : <input type='text' name='desc' value={desc} onChange={this.onChangeHandler} /></td></tr>
+                        <tr><td>Type : <input type='text' name='type' value={type} onChange={this.onChangeHandler}/></td></tr>
                     </table>
                     <button type = 'submit'>Add</button>
 
